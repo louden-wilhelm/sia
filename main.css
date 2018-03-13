@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/*GLOBAL STYLES*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.panel {
+    width: 100vw;
+    display: block;
+    z-index: 200;
+    background-color: #f0f5f9;
+}
+
+.header {
+    font: 24px/32px 'Varela Round', sans-serif;
+}
+
+.logo {
+    position: absolute;
+    padding: 8px 48px;
+    left: 0;
+    height: 72px;
+}
+
+/*NAV MENU*/
+.panel-1 {
+    text-align: right;
+    position: sticky;
+    z-index: 500;
+    height: 72px;
+    box-shadow: 0 1px 24px rgba(0,0,0,0.12);
+}
+
+.menu-item {
+    display: inline-flex;
+    padding: 0 24px;
+    color: #333;
+    font: 14px/72px 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mini-menu {
+    width: 100vw;
+    background-color: #f0f5f9;
+    position: absolute;
+    top: -216px;
+    transition: .5s ease;
+    z-index: 400;
+    text-align: center;
+}
+
+.mini-menu-item {
+    width: 100%;
+    line-height: 72px;
+    display: block;
+    color: #333;
+    font: 14px/72px 'Varela Round', sans-serif;
+    text-transform: uppercase;
+}
+
+.mini-menu.slide {
+    top: 72px;
+}
+
+/*HERO IMAGE*/
+#hero-image-container {
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#hero-image {
+    width: 100%;
+    display: block;
+    vertical-align: sub;
+}
+
+/*TAGLINE*/
+.panel-2 {
+    padding: 48px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.panel-2-content {
+    width: 75%;
+    max-width: 1200px;
+}
+
+/*BLOG*/
+.panel-3 {
+    padding: 48px;
+    position: relative;
+    font: 16px/24px 'PT Sans', sans-serif;
+}
+
+.block {
+    width: 240px;
+    display: inline-block;
+    margin: 16px 16px 0 0;
+    cursor: pointer;
+}
+
+.block-image-container {
+    width: 100%;
+    height: 120px;
+    display: block;
+    overflow: hidden;
+}
+
+.block-image {
+    width: 100%;
+}
+
+
+.block-content {
+    display: none;
+}
+
+.publish-date {
+    font-size: 10px;
+    opacity: 0.75;
+}
+
+#featured-article {
+    width: calc(100% - 64px);
+    display: block;
+    margin: 24px 0;
+}
+
+#featured-image-container {
+    width: 100%;
+    height: 240px;
+    display: block;
+    overflow: hidden;
+}
+
+#featured-header {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 16px 0 0;
+}
+
+#featured-content {
+    max-width: 720px;
+}
+
+#featured-date {
+    padding: 16px 0 0;
+}
+
+/*FOOTER*/
+.panel-4 {
+    padding: 48px;
+    text-align: center;
+    background-color: #52616b;
+}
+
+.link-separator {
+    border-right: 1px solid #444;
+    padding: 4px;
+    margin: 4px;
+}
+
+.footer-logo {
+    height: 72px;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.footer-info {
+   width: 100%;
+   font: 16px/32px 'PT Sans', sans-serif;
+}
+
+@media only screen and (max-width: 991px) {
+    
+    /*NAV MENU*/
+    #full-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        color: #333;
+        line-height: 72px;
+        border: 0;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        padding: 0 48px 0 0;
+    }
+
+    .panel-2-content, #featured-content, .footer-info {
+        font-size: 14px;
+    }
+
+    #featured-image-container {
+        height: auto;
+    }
+
+    #featured-header {
+        padding: 0;
+    }
+}
